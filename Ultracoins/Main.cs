@@ -141,27 +141,7 @@ namespace Ultracoins
                 }
             }
 
-            [HarmonyPatch(typeof(LeaderboardController), nameof(LeaderboardController.SubmitCyberGrindScore))]
-            [HarmonyPrefix]
-            public static bool no(LeaderboardController __instance)
-            {
-                return false;
-            }
-
-            [HarmonyPatch(typeof(LeaderboardController), nameof(LeaderboardController.SubmitLevelScore))]
-            [HarmonyPrefix]
-            public static bool nope(LeaderboardController __instance)
-            {
-                return false;
-            }
-
-            [HarmonyPatch(typeof(LeaderboardController), nameof(LeaderboardController.SubmitFishSize))]
-            [HarmonyPrefix]
-            public static bool notevenfish(LeaderboardController __instance)
-            {
-                return false;
-            }
-
+           
             [HarmonyPatch(typeof(Revolver), nameof(Revolver.InstaClick))]
             [HarmonyPostfix]
             public static void instaclicknochill(Revolver __instance)
